@@ -82,9 +82,11 @@ function rollDice() {
     } else {
       player1Score += randomNumber;
       player1.textContent = player1Score;
-      if (player2Score >= 100) {
+      if (player1Score >= 100) {
         player1WonGames += 1;
         player1Score = 0;
+        player2Score = 0;
+        player2.textContent = player2Score;
         player1.textContent = player1Score;
         player1Wins.textContent = player1WonGames;
         changePlayer();
@@ -101,6 +103,8 @@ function rollDice() {
       if (player2Score >= 100) {
         player2WonGames += 1;
         player2Score = 0;
+        player1Score = 0;
+        player1.textContent = player1Score;
         player2.textContent = player2Score;
         player2Wins.textContent = player2WonGames;
         changePlayer();
