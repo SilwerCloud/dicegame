@@ -49,6 +49,10 @@ function resetGame() {
   player1Wins.textContent = player1WonGames;
   player2.textContent = player2Score;
   player2Wins.textContent = player2WonGames;
+  if (!player1Active.classList.contains('player--active')) {
+    player2Active.classList.remove('player--active');
+    player1Active.classList.add('player--active');
+  }
 }
 
 // Changes player
