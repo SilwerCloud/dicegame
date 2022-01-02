@@ -20,7 +20,7 @@ const player2Active = document.querySelector('.player--1');
 const player1Wins = document.querySelector('#score--0');
 const player2Wins = document.querySelector('#score--1');
 
-// Reset game
+// Reset game button
 const resetGameButton = document.querySelector('.btn--new');
 
 // Generate random number 1 to 6
@@ -55,7 +55,7 @@ function resetGame() {
   }
 }
 
-// Changes player
+// Changes player , if current player = P1 will chaneg to P2
 function changePlayer() {
   if (currentPlayer === 'P1') {
     currentPlayer = 'P2';
